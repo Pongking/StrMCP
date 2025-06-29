@@ -1,6 +1,6 @@
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP('peng\'s MCP Server', version="0.0.1")
+mcp = FastMCP('peng\'s MCP Server',version="0.14.3")
 
 @mcp.tool(
     name='add',
@@ -25,3 +25,6 @@ def get_greeting(name: str) -> str:
 )
 def translate(message: str) -> str:
     return f'请将下面的话语翻译成中文：\n\n{message}'
+
+if __name__ == '__main__':
+    mcp.run(transport='stdio')
